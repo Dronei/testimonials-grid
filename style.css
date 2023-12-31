@@ -1,0 +1,148 @@
+/* 
+### Primary
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Font
+
+- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+- Weights: 500, 600
+*/
+@font-face {
+    font-family: 'Barlow';
+    src: url(Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf);
+}
+
+:root {
+    --v-Moderate-violet: hsl(263, 55%, 52%);
+    --v-Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --v-Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --v-White: hsl(0, 0%, 100%);
+
+    --v-Light-gray: hsl(0, 0%, 81%);
+    --v-Light-grayish-blue: hsl(210, 46%, 95%);
+
+    font-size: 13px;
+
+    font-family: 'Barlow';
+}
+
+
+
+.attribution {
+    margin-top: 1em;
+    font-size: 11px;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--v-Light-gray);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.div-avatar{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.div-name{
+    padding-left: 10px;
+}
+
+.div-name p{
+    box-sizing: border-box;
+    margin: -2px;
+}
+
+article {
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 1em;
+    padding: 20px;
+}
+
+#article-1 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--v-Moderate-violet);
+    flex: 2 1;
+    justify-content: center;
+}
+
+#article-2 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--v-Very-dark-grayish-blue);
+    flex: 1 2;
+}
+
+#article-3 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--v-Light-grayish-blue);
+}
+
+#article-4 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--v-Very-dark-blackish-blue);
+    color: var(--v-White);
+}
+
+#article-5 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--v-Light-grayish-blue);
+    flex: 2 1;
+}
+
+article img{
+    width: 30px;
+    position: relative;
+}
+
+.div-avatar img {
+    border: 2px solid white;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        flex-direction: column;
+    }
+}
